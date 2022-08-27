@@ -1,25 +1,35 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById("root"))
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Greeting() {
-    const isMarried = false;
+  const user = {
+    fisrtName: "Du",
+    lastName: "voy",
+  };
+  
+  function add(a, b) {
+    return a + b;
+  }
 
-    // if (isMarried) {
-    //     return <h1>It is married!!</h1>
-    // } else {
-    //     return <h1>It is not married!!</h1>
-    // }
+  function subtract(a, b) {
+    return a - b;
+  }
 
-    // return isMarried ? <h1>It is married!!</h1> : <h1>It is not married!!</h1>
-    return <h1>{isMarried ? "It is married!! 🤢" : "It is not married 😀"}</h1>
+  // return <h1>{JSON.stringify(user)}</h1>
+  const response = (
+    <div>
+      <h1>{user.fisrtName} ++ {add(137, 4)}</h1>
+      <h1>{user.lastName} -- {subtract(137, 4)}</h1>
+    </div>
+  );
 
+  return response;
 }
 
-
-root.render(<div>
+root.render(
+  <>
     <Greeting />
-</div>)
-
+  </>
+);
