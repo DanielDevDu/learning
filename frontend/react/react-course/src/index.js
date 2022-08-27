@@ -5,16 +5,21 @@ const root = ReactDOM.createRoot(document.getElementById("root"))
 
 
 function Greeting() {
-    return <div>
-        <h1>Hello World</h1>
-        <p>This is a paragraph</p>
-    </div>
+    const isMarried = false;
+
+    // if (isMarried) {
+    //     return <h1>It is married!!</h1>
+    // } else {
+    //     return <h1>It is not married!!</h1>
+    // }
+
+    // return isMarried ? <h1>It is married!!</h1> : <h1>It is not married!!</h1>
+    return <h1>{isMarried ? "It is married!! 🤢" : "It is not married 😀"}</h1>
+
 }
 
 
 root.render(<div>
-    <Greeting />
-    <Greeting />
     <Greeting />
 </div>)
 
