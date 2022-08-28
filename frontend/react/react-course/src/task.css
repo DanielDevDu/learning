@@ -1,0 +1,13 @@
+.card-task {
+    background-color: rgb(48, 51, 240);
+    color: rgb(252, 227, 227);
+    padding: 10px;
+}
+
+.bg-green {
+    background-color: rgb(115, 211, 18);
+}
+
+.bg-red {
+    background-color: rgb(230, 19, 19);
+}
