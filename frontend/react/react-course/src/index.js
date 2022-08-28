@@ -5,13 +5,16 @@ import { Greeting, OtherGreeting } from "./Greeting";
 import data from "./data";
 import { Button } from "./Button";
 import { TaskCard } from "./Task";
+import { ComponentClass } from "./ComponentClass";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <>
-    <TaskCard ready={false} />
+    {/* <TaskCard ready={false} />
     <br></br>
-    <TaskCard ready={true} />
+    <TaskCard ready={true} /> */}
+
+    <ComponentClass />
   </>
 );
