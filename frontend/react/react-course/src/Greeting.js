@@ -1,28 +1,18 @@
-export function Greeting() {
-  const user = {
-    fisrtName: "Du",
-    lastName: "voy",
-  };
-
-  function add(a, b) {
-    return a + b;
-  }
-
-  function subtract(a, b) {
-    return a - b;
-  }
-
-  // return <h1>{JSON.stringify(user)}</h1>
-  const response = (
-    <div>
-      <h1>
-        {user.fisrtName} ++ {add(137, 4)}
-      </h1>
-      <h1>
-        {user.lastName} -- {subtract(137, 4)}
-      </h1>
-    </div>
-  );
-
+export function Greeting(props) {
+  const data = props.data;
+  const response = <>
+    <h1>Hello {data.first_name} {data.last_name}</h1>
+    <p>with email {data.email}</p>
+    <p>Gender {data.gener}</p>
+  </>
   return response;
 }
+
+export function OtherGreeting({ name, age = 20 }) {
+  console.log(name)
+  const response = <>
+    <h1>Hello from Other {name} is {age}</h1>
+  </>
+  return response;
+}
+
