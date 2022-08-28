@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
 
 export function Button({ text = "Click me", name }) {
+  const handleClick = () => {
+    console.log("Click on Button");
+  };
   return (
-    <button>
+    <button onClick={handleClick}>
       <span>
         {text} - {name}
       </span>

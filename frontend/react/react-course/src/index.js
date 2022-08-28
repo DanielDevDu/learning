@@ -6,15 +6,17 @@ import data from "./data";
 import { Button } from "./Button";
 import { TaskCard } from "./Task";
 import { ComponentClass } from "./ComponentClass";
+import { Form } from "./Form";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <>
-    {/* <TaskCard ready={false} />
-    <br></br>
-    <TaskCard ready={true} /> */}
+    <Button /> 
+    <TaskCard ready={false} />
+    <TaskCard ready={true} />
 
-    <ComponentClass />
+    <Form />
+
   </>
 );
