@@ -1,1 +1,1 @@
-<img src="https://miro.medium.com/max/604/0*ia_gKRqbfM5xyYDJ.jpg" jsaction="load:XAeZkd;" jsname="HiaYvf" class="n3VNCb KAlRDb" alt="Using Redis with Node JS. What is Redis | by Chamara Madhushan Liyanage |  HackerNoon.com | Medium" data-noaft="1" style="width: 450px; height: 201.159px; margin: 80.4705px 0px;">
+<img src="https://miro.medium.com/max/604/0*ia_gKRqbfM5xyYDJ.jpg">
