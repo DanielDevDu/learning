@@ -1,7 +1,17 @@
+import { data } from './data';
+
 export function UserCard() {
   return (
     <div>
-      <h1>UserCard</h1>
+      {data.map((user) => {
+        return (
+          <div key={user.id}>
+            <h3>{user.name}</h3>
+            <p>{user.email}</p>
+            <h6>{user.company.name}</h6>
+          </div>
+        );
+      })}
     </div>
   );
 }
