@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export const AddName = () => {
   const [name, setName] = useState('');
+  const [names, setNames] = useState([]);
+
+  useEffect(() => {
+    console.log('useEffect');
+  }, [names]);
 
   const handleSubmit = (e) => {
     setName(e.target.value);
@@ -12,13 +17,20 @@ export const AddName = () => {
   };
 
   const handleClick = (e) => {
-    alert('The name is: ' + name);
+    e.preventDefault();
+    if (name) {
+      setNames([...names, name]);
+    }
+    // e.current.value = null;
   };
 
   return (
     <div>
       <input onSubmit={handleSubmit} onChange={handleChange} />
       <button onClick={handleClick}>Save</button>
+      {names.map((name, index) => (
+        <div key={index}>{name}</div>
+      ))}
     </div>
   );
 };
