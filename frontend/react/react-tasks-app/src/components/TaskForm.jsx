@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useContext } from 'react';
+import { TaskContext } from '../context/TaskContext';
 
-function TaskForm(props) {
+function TaskForm() {
   const [taskName, setTaskName] = useState('');
   const [taskDescription, setTaskDescription] = useState('');
+  const { createTask } = useContext(TaskContext);
 
   const handleChange = (e) => {
     setTaskName(e.target.value);
@@ -10,7 +12,7 @@ function TaskForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.createTask({
+    createTask({
       name: taskName,
       description: taskDescription,
     });
