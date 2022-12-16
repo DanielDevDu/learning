@@ -44,7 +44,8 @@ namespace Leccion {
                 Console.WriteLine("Ingrese un número:");
                 int number = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Ingrese un char:");
-                char character = Convert.ToChar(Console.ReadLine());
+                String? cha = Console.ReadLine();
+                char character = Convert.ToChar(cha is not null? cha: "");
 
                 bool condition1 = number >= 18;
                 bool condition2 = character == 'a';
